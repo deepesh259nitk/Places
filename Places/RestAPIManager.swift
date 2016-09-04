@@ -18,7 +18,7 @@ class RestApiManager: NSObject {
     
     func getPlacesTitle(onCompletion: (JSON) -> Void) {
         
-        let route = URLConstants.tempUrl
+        let route = URLConstants.finalURL
         print("route now is \(route)")
         makeHTTPGetRequest(route, onCompletion: { json, err in
             onCompletion(json as JSON)

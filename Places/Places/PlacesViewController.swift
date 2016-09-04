@@ -10,9 +10,11 @@ import UIKit
 import SwiftyJSON
 import CoreLocation
 
-class PlacesViewController: UITableViewController, CLLocationManagerDelegate {
+class PlacesViewController: UITableViewController, CLLocationManagerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
     
     var places = [placesDataObject]()
+    var searchController: UISearchController!
+    var shouldShowSearchResults = false
     var lat : Double?
     var long : Double?
     
@@ -24,7 +26,10 @@ class PlacesViewController: UITableViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Near By Places"
         
+        configureSearchController()
+        
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.tableView.allowsSelection = false
         
         // Ask for Authorisation from the User.
         self.locManager.requestAlwaysAuthorization()
@@ -38,7 +43,7 @@ class PlacesViewController: UITableViewController, CLLocationManagerDelegate {
             locManager.distanceFilter = 10
         }
         
-        self.restAPICall()
+        //self.restAPICall()
         
     }
     
@@ -122,6 +127,62 @@ class PlacesViewController: UITableViewController, CLLocationManagerDelegate {
                 self.tableView.reloadData()
             })
         }
+    }
+    
+    // MARK: Search Functions
+    func configureSearchController() {
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search here..."
+        searchController.searchBar.delegate = self
+        searchController.searchBar.sizeToFit()
+        
+        // Place the search bar view to the tableview headerview.
+        self.tableView.tableHeaderView = searchController.searchBar
+        
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        //do whatever with searchController here.
+        print("updateSearchResultsForSearchController got called")
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        print("searchBarTextDidBeginEditing called")
+        self.shouldShowSearchResults = true
+        self.tableView.reloadData()
+    }
+    
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        print("searchBarCancelButtonClicked called")
+        self.shouldShowSearchResults = false
+        self.tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        
+        print("text entered is \(searchBar.text)")
+        
+        //first create the url
+        
+        URLConstants.urlParams = ""
+        
+        if let searchStr = searchBar.text {
+            
+            if let lat = self.lat, lng = self.long {
+                
+                URLConstants.urlParams = "&ll=\(lat),\(lng)&query=\(searchStr)"
+            }
+            
+        }
+        
+        URLConstants.finalURL = "\(URLConstants.getPlacesURL)\(URLConstants.urlParams)"
+        
+        self.restAPICall()
+        searchController.searchBar.resignFirstResponder()
     }
 
 }

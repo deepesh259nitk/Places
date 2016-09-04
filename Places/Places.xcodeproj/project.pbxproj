@@ -45,7 +45,6 @@
 		4876E8601D7C269600BEC5F7 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4876E8631D7C269600BEC5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4876E8651D7C269600BEC5F7 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlacesViewController.swift; path = Places/PlacesViewController.swift; sourceTree = "<group>"; };
-		4876E8681D7C269600BEC5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4876E86A1D7C269600BEC5F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4876E86D1D7C269600BEC5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4876E86F1D7C269600BEC5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -448,15 +447,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4876E8671D7C269600BEC5F7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4876E8681D7C269600BEC5F7 /* Base */,
-			);
-			name = Main.storyboard;
-			path = Places;
-			sourceTree = "<group>";
-		};
 		4876E86C1D7C269600BEC5F7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
