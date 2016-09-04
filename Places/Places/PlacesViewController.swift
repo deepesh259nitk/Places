@@ -14,7 +14,6 @@ class PlacesViewController: UITableViewController, CLLocationManagerDelegate, UI
     
     var places = [placesDataObject]()
     var searchController: UISearchController!
-    var shouldShowSearchResults = false
     var lat : Double?
     var long : Double?
     
@@ -151,14 +150,12 @@ class PlacesViewController: UITableViewController, CLLocationManagerDelegate, UI
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         print("searchBarTextDidBeginEditing called")
-        self.shouldShowSearchResults = true
         self.tableView.reloadData()
     }
     
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         print("searchBarCancelButtonClicked called")
-        self.shouldShowSearchResults = false
         self.tableView.reloadData()
     }
     
