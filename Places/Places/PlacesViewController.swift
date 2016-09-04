@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import SwiftyJSON
 import CoreLocation
 
 class PlacesViewController: UITableViewController, CLLocationManagerDelegate {
     
+    var places = [placesDataObject]()
     var lat : Double?
     var long : Double?
     
@@ -32,6 +34,8 @@ class PlacesViewController: UITableViewController, CLLocationManagerDelegate {
             locManager.startUpdatingLocation()
             locManager.distanceFilter = 10
         }
+        
+        self.restAPICall()
         
     }
     
@@ -80,6 +84,27 @@ class PlacesViewController: UITableViewController, CLLocationManagerDelegate {
         tableView.estimatedRowHeight = 144.0
         tableView.rowHeight = UITableViewAutomaticDimension
         return 155.0
+    }
+    
+    // MARK: RestAPI Calls.
+    func restAPICall(){
+        
+        RestApiManager.sharedInstance.getPlacesTitle { (json: JSON) in
+            
+            self.places = []
+            
+            for places in json["response"]["venues"] {
+                
+                print(places.1["name"])
+                print(places.1["contact"]["phone"])
+                self.places.append(placesDataObject(json: places.1))
+                
+            }
+            
+            dispatch_async(dispatch_get_main_queue(),{
+                //self.tableView.reloadData()
+            })
+        }
     }
 
 }
