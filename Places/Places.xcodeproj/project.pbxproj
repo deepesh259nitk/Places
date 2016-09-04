@@ -10,7 +10,6 @@
 		30FBBABE67ED284EABEFD094 /* Pods_Places.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFABE30D06FEDBFC9DA6C5A3 /* Pods_Places.framework */; };
 		4876E8641D7C269600BEC5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876E8631D7C269600BEC5F7 /* AppDelegate.swift */; };
 		4876E8661D7C269600BEC5F7 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876E8651D7C269600BEC5F7 /* PlacesViewController.swift */; };
-		4876E8691D7C269600BEC5F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4876E8671D7C269600BEC5F7 /* Main.storyboard */; };
 		4876E86B1D7C269600BEC5F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4876E86A1D7C269600BEC5F7 /* Assets.xcassets */; };
 		4876E86E1D7C269600BEC5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4876E86C1D7C269600BEC5F7 /* LaunchScreen.storyboard */; };
 		4876E8791D7C269700BEC5F7 /* PlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876E8781D7C269700BEC5F7 /* PlacesTests.swift */; };
@@ -19,6 +18,10 @@
 		4876E89A1D7C308000BEC5F7 /* placesDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876E8991D7C308000BEC5F7 /* placesDataObject.swift */; };
 		4876E89C1D7C30F100BEC5F7 /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876E89B1D7C30F100BEC5F7 /* RestAPIManager.swift */; };
 		4876E89E1D7C314600BEC5F7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876E89D1D7C314600BEC5F7 /* Constants.swift */; };
+		4876E8A21D7C41D500BEC5F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4876E8A11D7C41D500BEC5F7 /* Main.storyboard */; };
+		4876E8A61D7C41F300BEC5F7 /* call_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4876E8A31D7C41F300BEC5F7 /* call_icn.png */; };
+		4876E8A71D7C41F300BEC5F7 /* location_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4876E8A41D7C41F300BEC5F7 /* location_icn.png */; };
+		4876E8A81D7C41F300BEC5F7 /* web_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4876E8A51D7C41F300BEC5F7 /* web_icn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,10 @@
 		4876E8991D7C308000BEC5F7 /* placesDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = placesDataObject.swift; sourceTree = "<group>"; };
 		4876E89B1D7C30F100BEC5F7 /* RestAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		4876E89D1D7C314600BEC5F7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4876E8A11D7C41D500BEC5F7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4876E8A31D7C41F300BEC5F7 /* call_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call_icn.png; sourceTree = "<group>"; };
+		4876E8A41D7C41F300BEC5F7 /* location_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icn.png; sourceTree = "<group>"; };
+		4876E8A51D7C41F300BEC5F7 /* web_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web_icn.png; sourceTree = "<group>"; };
 		D2CA5AE24B1358719407BCB5 /* Pods-Places.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Places.release.xcconfig"; path = "Pods/Target Support Files/Pods-Places/Pods-Places.release.xcconfig"; sourceTree = "<group>"; };
 		FD2D5A7B3C6019F3D5B95409 /* Pods-Places.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Places.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Places/Pods-Places.debug.xcconfig"; sourceTree = "<group>"; };
 		FFABE30D06FEDBFC9DA6C5A3 /* Pods_Places.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Places.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +171,9 @@
 		4876E8921D7C2A8900BEC5F7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4876E8A31D7C41F300BEC5F7 /* call_icn.png */,
+				4876E8A41D7C41F300BEC5F7 /* location_icn.png */,
+				4876E8A51D7C41F300BEC5F7 /* web_icn.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -171,7 +181,7 @@
 		4876E8931D7C2A9A00BEC5F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4876E8671D7C269600BEC5F7 /* Main.storyboard */,
+				4876E8A11D7C41D500BEC5F7 /* Main.storyboard */,
 				4876E8971D7C2E6400BEC5F7 /* PlacesTableViewCell.swift */,
 			);
 			name = View;
@@ -319,9 +329,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4876E8A61D7C41F300BEC5F7 /* call_icn.png in Resources */,
+				4876E8A81D7C41F300BEC5F7 /* web_icn.png in Resources */,
+				4876E8A21D7C41D500BEC5F7 /* Main.storyboard in Resources */,
+				4876E8A71D7C41F300BEC5F7 /* location_icn.png in Resources */,
 				4876E86E1D7C269600BEC5F7 /* LaunchScreen.storyboard in Resources */,
 				4876E86B1D7C269600BEC5F7 /* Assets.xcassets in Resources */,
-				4876E8691D7C269600BEC5F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

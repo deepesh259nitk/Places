@@ -10,6 +10,11 @@ import UIKit
 
 class PlacesTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var placesName: UILabel!
+    @IBOutlet weak var callBtn: UIButton!
+    @IBOutlet weak var webSiteBtn: UIButton!
+   
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()
@@ -21,4 +26,21 @@ class PlacesTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
+    @IBAction func locationBtnTapped(sender: AnyObject) {
+        
+        print("location button tag \(sender.tag)")
+        
+    }
+    
+    @IBAction func webBtnTapped(sender: AnyObject) {
+        
+        print("web button tag \(sender.tag)")
+    }
+    
+    @IBAction func callBtnTapped(sender: AnyObject) {
+        
+        print("call button tag \(sender.tag)")
+    }
+
 }
